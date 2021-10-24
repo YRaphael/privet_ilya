@@ -16,7 +16,7 @@ def get_digest(content):
 
 
 def generate_message():
-    return "".join([random.choice(alphabet)] * random.randint(10, 20))
+    return "".join([random.choice(alphabet) for i in range(random.randint(10, 20))])
 
 
 def add_content(content):
@@ -36,7 +36,7 @@ if __name__ == '__main__':
         for j in range(7):
             sym = picture[j * 52 + i]
             if sym == "+":
-                print("*", end = "")
+                print("*", end="")
             else:
                 print(" ", end="")
         print()
